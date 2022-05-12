@@ -17,7 +17,13 @@ int main()
 
     */
 
-   regex->__printNode__();
+   vector<string> re ={ "A quick brown fox jumps {#*#}",
+                        "A quick brown fox sleeps.",
+                        "A quick brown fox jumps {#*#} a {#*#} dog."};
+
+   regex->insert(re);
+   regex->printDFS();
+   //regex->printBFS();
 
     return 0;
 

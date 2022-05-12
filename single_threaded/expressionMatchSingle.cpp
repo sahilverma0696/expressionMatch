@@ -50,6 +50,30 @@ void    ExpressionMatch::__stringsToMap__       (vector<string> &expressionList,
 
 void    ExpressionMatch::__insert__             (string expression, vector<string> &tokenExpression)
 {
+    Node* current = head;
+    
+    int     tokenSize = tokenExpression.size();
+    for(int i = 0;i<tokenSize;i++)
+    {
+        string s = tokenExpression[i];
+        if(current->children.count(s)>0)
+        {
+            current = current->children[s];
+        }
+        else
+        {
+            current->children[s] = new Node();
+            current = current->children[s];
+
+            current->word = s;
+            if(s == variable)
+            {
+                current->isVariable = true;
+            }
+        }
+    }
+    current->isEnd = true;
+    current->expression = expression;
 
 }
 
@@ -73,7 +97,7 @@ void    ExpressionMatch::__printNode__          (Node* current)
     if(current) {
         cout<<"\tWord:\t"<<current->word<<endl;
         cout<<"\tisVariable:\t"<<current->isVariable<<endl;
-        cout<<"\tisLeaf:\t"<<current->isLeaf<<endl;
+        cout<<"\tisEnd:\t"<<current->isEnd<<endl;
         cout<<"\tExpression:\t"<<current->expression<<endl;
         cout<<"\tChildren:\n\t{"<<endl;
         for(auto itr:current->children)
@@ -86,14 +110,56 @@ void    ExpressionMatch::__printNode__          (Node* current)
 
 }
 
+void    ExpressionMatch::__printDFS__           (Node* current)
+{
+    if(current)
+    {
+        __printNode__(current);
+        for(auto itr:current->children)
+        {
+            __printDFS__(itr.second);
+        }
+    }
+
+}
+
+void    ExpressionMatch::__printBFS__           (Node* current)
+{
+    queue<Node*> q;
+
+    q.push(current);
+
+    while(!q.empty())
+    {
+        int size = q.size();
+        while(size--)
+        {
+            Node* curr = q.front();q.pop();
+            __printNode__(curr);
+            for(auto itr:curr->children)
+            {
+                q.push(itr.second);
+            }
+        }
+        cout<<"\n\n\n";
+    }
+
+}
+
+
 void    ExpressionMatch::printDFS               ()
 {
+    Node* current = head;
+    __printDFS__(current);
 
 }
 
 void    ExpressionMatch::printBFS               ()
 {
-
+    // needs work 
+    // make internal func to print beautifully 
+    Node* current = head;
+    __printBFS__(current);
 }
 
 void    ExpressionMatch::insert                 (vector<string> expressionList)

@@ -38,7 +38,7 @@ class Node {
     // just with child nodes recognized by hash, not ascii values
 
 public:
-    bool    isLeaf;
+    bool    isEnd;
     bool    isVariable;
 
     string  word;                           // holds the information for the current node word
@@ -48,7 +48,7 @@ public:
 
     Node()
     {
-        isLeaf      = false;
+        isEnd      = false;
         isVariable  = false;
     }
 
@@ -78,7 +78,8 @@ private:
     void    __varPraseMax__         (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
 
     void    __printNode__           (Node* current);
-    
+    void    __printDFS__            (Node* current);
+    void    __printBFS__            (Node* current);
 public:
 
     ExpressionMatch     (string varExpression, string delimeters);
