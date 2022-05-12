@@ -25,6 +25,7 @@ and we return from the maxHeap.
 #include<string>
 #include<unordered_map>
 #include<queue>
+#include<iostream>
 
 
 
@@ -67,15 +68,17 @@ private:
     priority_queue< pair<int,string> > resultHeap;
 
 private:
-    void    __stringTokenize__      (const string &input, string &output);
+    void    __stringTokenize__      (const string &input, vector<string> &output);
     void    __stringsToMap__        (vector<string> &expressionList, unordered_map< string,vector<string> > &expressionMap);
 
-    void    __insert__              (string &expression, vector<string> &tokenExpression);
+    void    __insert__              (string expression, vector<string> &tokenExpression);
 
     void    __varParse__            (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
     void    __varPraseMin__         (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
     void    __varPraseMax__         (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
 
+    void    __printNode__           (Node* current);
+    
 public:
 
     ExpressionMatch     (string varExpression, string delimeters);

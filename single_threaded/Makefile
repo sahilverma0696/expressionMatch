@@ -1,4 +1,4 @@
 
 final:
-	g++ expressionMatchSingle.cpp main.cpp -o regex.out
+	g++ --std=c++17 expressionMatchSingle.cpp main.cpp -o regex.out
 	./regex.out
