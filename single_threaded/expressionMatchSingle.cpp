@@ -125,24 +125,58 @@ void    ExpressionMatch::__printDFS__           (Node* current)
 
 void    ExpressionMatch::__printBFS__           (Node* current)
 {
-    queue<Node*> q;
+    list<Node*> q;
 
-    q.push(current);
+    q.push_back(current);
 
     while(!q.empty())
     {
         int size = q.size();
+        list<Node*> level = q;
+        __beautyBFS__(level);
         while(size--)
         {
-            Node* curr = q.front();q.pop();
-            __printNode__(curr);
+            Node* curr = q.front();q.pop_front();
+           // __printNode__(curr);
             for(auto itr:curr->children)
             {
-                q.push(itr.second);
+                q.push_back(itr.second);
             }
         }
-        cout<<"\n\n\n";
+        //cout<<"\n\n\n";
     }
+
+}
+
+
+void    ExpressionMatch::__beautyBFS__(list<Node*> level)
+{
+    // Trust me not my best work, can be better made
+
+    for(Node* current:level)
+    {
+        cout<<"\tWord:\t"<<current->word<<"\t\t";
+    }
+    cout<<"\n";
+
+    for(Node* current:level)
+    {
+        cout<<"\tisVariable:\t"<<current->isVariable<<"\t\t";
+    }
+    cout<<"\n";
+
+    for(Node* current:level)
+    {
+        cout<<"\tisEnd:\t"<<current->isEnd<<"\t\t";
+    }
+    cout<<"\n";
+
+    for(Node* current:level)
+    {
+        cout<<"\tExpression:\t"<<current->expression<<"\t\t";
+    }
+    cout<<"\n\n\n";
+
 
 }
 

@@ -22,8 +22,8 @@ int main()
                         "A quick brown fox jumps {#*#} a {#*#} dog."};
 
    regex->insert(re);
-   regex->printDFS();
-   //regex->printBFS();
+   //regex->printDFS();
+   regex->printBFS();
 
     return 0;
 

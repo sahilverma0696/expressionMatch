@@ -26,6 +26,7 @@ and we return from the maxHeap.
 #include<unordered_map>
 #include<queue>
 #include<iostream>
+#include<list>
 
 
 
@@ -80,6 +81,7 @@ private:
     void    __printNode__           (Node* current);
     void    __printDFS__            (Node* current);
     void    __printBFS__            (Node* current);
+    void    __beautyBFS__           (list<Node*> level);
 public:
 
     ExpressionMatch     (string varExpression, string delimeters);
