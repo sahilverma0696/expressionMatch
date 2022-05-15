@@ -37,3 +37,11 @@ make
 ```
 Currently output will go in `log.txt`
 
+** NOTE **
+Currently not working with {#*#}
+
+
+** Branches **
+
+Main -> main
+Debug and log -> bug
