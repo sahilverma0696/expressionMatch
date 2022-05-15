@@ -83,7 +83,7 @@ void    ExpressionMatch::__varParse__           (Node* current, int i, int depth
     if(current)
     {
         __varParseMin__(current,i,depth,size,tokenExpression);
-        //__varParseMax__(current,i,depth,size,tokenExpression);
+        __varParseMax__(current,i,depth,size,tokenExpression);
     }
 
 }
@@ -101,7 +101,6 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
         p = make_pair(depth,current->expression);
         resultHeap.push(p);
         return;
-            
     }
 
     int     varCounter = 0;
@@ -109,40 +108,18 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
     cout<<"current Node\n";
     __printNode__(current);
 
-    if(current->children.size()>0 && current->children[variable])
+    if(current->children[variable])
     {
-            cout<<current->children.size()<<endl;
-
-        // var pointer shift
-        Node* new_ptr = current;
-        
-        for(auto itr:new_ptr->children)
-        {
-            if(!itr.second)
-                continue;
-            Node* new_current = nullptr;
-            //cout<<itr.first;
-            
-            __printNode__(itr.second);
-            if(itr.second->isVariable)
-            {
-                new_current = new_ptr->children[variable];
-                
-                __varParse__(new_current,i,depth,size,tokenExpression);
-            }
-            else
-            {
-                new_current = new_ptr->children[itr.first];
-                __wordPrase__(new_current,i+1,depth+1,size,tokenExpression);
-            }
-            
-        }
-        //current = nullptr; // breaking with this
-        
-        //current = current->children[variable];
+        cout<<"TRUE\n";
+        current = current->children[variable];
+    }
+    else
+    {
+        cout<<"No String node present, and no variable node present\n EXITING!!!\n";
+        return;
     }
 
-    //__printNode__(current);
+    __printNode__(current);
     while(current && current->children.count(tokenExpression[i])==0 && i < size && varCounter <varLimit)
     {
         // multiple var continiously
@@ -156,13 +133,15 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
     }
     depth++;
     cout<<"In __varParseMin__ After while "<<endl;
+    __printNode__(current);
+    cout<<tokenExpression[i];
     if(current && current->children[variable])
     {
         cout<<"Entering multiple var"<<endl;
         __varParse__(current,i,depth,size,tokenExpression);
     }
 
-    if(current && ((current->children.count(tokenExpression[i])>0 && i>size) || current->children.count(tokenExpression[i])))
+    if(current && ((current->children.count(tokenExpression[i])>0 && i>size) || !current->children.count(tokenExpression[i])))
     {
         // no path
         cout<<"Exiting __varParseMin__ : No path"<<endl;
@@ -193,85 +172,76 @@ void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth
 {
     if(!current)
         return;
+    cout<<"In __varParseMax__ with node "<<current->word<<endl;
+
     if(current->isEnd)
     {
+        cout<<"pushing "<<current->expression<<endl;
         pair<int,string> p;
         p = make_pair(depth,current->expression);
         resultHeap.push(p);
-        if(i==size-1)
-            return;
+        return;
+    }
+    else
+    {
+        cout<<"No String node present, and no variable node present\n EXITING!!!\n";
+        return;
     }
 
     int     varCounter = 0;
 
-    if(current->children.size()>0 && current->children[variable])
-    {
-            cout<<current->children.size()<<endl;
+    cout<<"current Node\n";
+    __printNode__(current);
 
-        // var pointer shift
-        Node* new_ptr = current;
-        for(auto itr:new_ptr->children)
-        {
-            if(!itr.second)
-                continue;
-            Node* new_current = nullptr;
-            //cout<<itr.first;
-            
-            __printNode__(itr.second);
-            if(itr.second->isVariable)
-            {
-                new_current = new_ptr->children[variable];
-                
-                __varParse__(new_current,i,depth,size,tokenExpression);
-            }
-            else
-            {
-                new_current = new_ptr->children[itr.first];
-                __wordPrase__(new_current,i+1,depth+1,size,tokenExpression);
-            }
-            
-        }
-        
-        
-        //current = current->children[variable];
+    if(current->children[variable])
+    {
+        current = current->children[variable];
     }
 
+    __printNode__(current);
     while(i < size && varCounter <varLimit)
     {
         // multiple var continiously
         if(current->children[variable])
             break;
-
+        
         cout<<"__varParseMax__\t"<<tokenExpression[i]<<"\t"<<varCounter<<"\t"<<current->word<<endl;
         varCounter +=tokenExpression[i].size();
         i++;
         
     }
     depth++;
-
-    if(current->children[variable])
+    cout<<"In __varParseMax__ After while "<<endl;
+    __printNode__(current);
+    cout<<tokenExpression[i];
+    if(current && current->children[variable])
     {
-        // multiple var
+        cout<<"Entering multiple var"<<endl;
         __varParse__(current,i,depth,size,tokenExpression);
     }
 
-    if((current->children.count(tokenExpression[i])>0 && i>size) || current->children.count(tokenExpression[i]))
+    if(current && ((current->children.count(tokenExpression[i])>0 && i>size) || !current->children.count(tokenExpression[i])))
     {
         // no path
+        cout<<"Exiting __varParseMax__ : No path"<<endl;
         return;
+
     }
 
-    if(current->isEnd)
+    if(current && current->isEnd)
     {
         pair<int,string> p;
         p = make_pair(depth,current->expression);
         resultHeap.push(p);
+        cout<<"pushing "<<current->expression<<endl;
         if(i==size-1)
             return;
     }
-
-    if(current->children.count(tokenExpression[i])>0)
+    cout<<"Till here\n";
+    __printNode__(current);
+    if(current && current->children.count(tokenExpression[i])>0)
     {
+        cout<<"Entering__wordPrase__";
         __wordPrase__(current,i,depth,size,tokenExpression);
     }
 

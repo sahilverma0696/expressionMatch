@@ -18,23 +18,20 @@ int main()
 
     */
 
-   vector<string> re ={ "A quick brown fox jumps {#*#}",
+   
+    vector<string> re ={ "A quick brown fox jumps {#*#}",
                         "A quick brown fox sleeps.",
                         "A quick brown fox jumps {#*#} a {#*#} dog."};
 
     string       body = "A quick brown fox jumps bla a lazy dog.";
-
-   regex->insert(re);
+    
+    regex->insert(re);
    //regex->printDFS();
-   //regex->printBFS();
+    regex->printBFS();
 
-   string result = regex->search(body);
+    string result = regex->search(body);
 
-   cout<<result;
-
-    //regex->printDFS();
-
-
+    cout<<result;
     return 0;
 
 }
