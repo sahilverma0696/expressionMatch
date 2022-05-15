@@ -139,7 +139,6 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
         }
         //current = nullptr; // breaking with this
         
-        
         //current = current->children[variable];
     }
 
