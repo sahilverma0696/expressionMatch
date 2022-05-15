@@ -65,6 +65,7 @@ private:
     string      variable;
     string      delimeters;
     int         dictSize;
+    int         varLimit;
 
     priority_queue< pair<int,string> > resultHeap;
 
@@ -75,8 +76,11 @@ private:
     void    __insert__              (string expression, vector<string> &tokenExpression);
 
     void    __varParse__            (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
-    void    __varPraseMin__         (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
-    void    __varPraseMax__         (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
+    void    __varParseMin__         (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
+    void    __varParseMax__         (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
+
+    void    __wordPrase__         (Node* current, int i, int depth, int size, vector<string> &tokenExpression);
+
 
     void    __printNode__           (Node* current);
     void    __printDFS__            (Node* current);
@@ -84,7 +88,7 @@ private:
     void    __beautyBFS__           (list<Node*> level);
 public:
 
-    ExpressionMatch     (string varExpression, string delimeters);
+    ExpressionMatch     (string varExpression, string delimeters, int varLimit);
 
     void    printDFS    ();
     void    printBFS    ();

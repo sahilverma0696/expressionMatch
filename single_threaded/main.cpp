@@ -5,7 +5,8 @@ int main()
 {
     string variable = "{#*#}";
     string delimeter= " ,.-:";
-    ExpressionMatch* regex = new ExpressionMatch(variable,delimeter);
+    int    varLimit = 30;
+    ExpressionMatch* regex = new ExpressionMatch(variable,delimeter,varLimit);
 
     /*
     string input = "is seven-layer cake only had six: layers.";
@@ -17,14 +18,20 @@ int main()
 
     */
 
-   vector<string> re ={ "A quick brown fox jumps {#*#}",
+   
+    vector<string> re ={ "A quick brown fox jumps {#*#}",
                         "A quick brown fox sleeps.",
                         "A quick brown fox jumps {#*#} a {#*#} dog."};
 
-   regex->insert(re);
+    string       body = "A quick brown fox jumps bla a lazy dog.";
+    
+    regex->insert(re);
    //regex->printDFS();
-   regex->printBFS();
+    regex->printBFS();
 
+    string result = regex->search(body);
+
+    cout<<result;
     return 0;
 
 }

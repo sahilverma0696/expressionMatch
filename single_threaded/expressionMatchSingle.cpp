@@ -1,12 +1,13 @@
 #include "expressionMatchSingle.hpp"
 
 
-ExpressionMatch::ExpressionMatch    (string varExpression, string delimeters)
+ExpressionMatch::ExpressionMatch    (string varExpression, string delimeters,int varLimit = 100)
 {
     head                = new Node();
     this->variable      = varExpression;
     this->delimeters    = delimeters;
     dictSize            = 256;
+    this->varLimit      = varLimit;      
 
 }
 
@@ -79,16 +80,207 @@ void    ExpressionMatch::__insert__             (string expression, vector<strin
 
 void    ExpressionMatch::__varParse__           (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
 {
+    if(current)
+    {
+        __varParseMin__(current,i,depth,size,tokenExpression);
+        __varParseMax__(current,i,depth,size,tokenExpression);
+    }
 
 }
 
-void    ExpressionMatch::__varPraseMin__        (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
+void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
 {
+    if(!current)
+        return;
+    cout<<"In __varParseMin__ with node "<<current->word<<endl;
+
+    if(current->isEnd)
+    {
+        cout<<"pushing "<<current->expression<<endl;
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);
+        return;
+    }
+
+    int     varCounter = 0;
+
+    cout<<"current Node\n";
+    __printNode__(current);
+
+    if(current->children[variable])
+    {
+        cout<<"TRUE\n";
+        current = current->children[variable];
+    }
+    else
+    {
+        cout<<"No String node present, and no variable node present\n EXITING!!!\n";
+        return;
+    }
+
+    __printNode__(current);
+    while(current && current->children.count(tokenExpression[i])==0 && i < size && varCounter <varLimit)
+    {
+        // multiple var continiously
+        if(current->children[variable])
+            break;
+        
+        cout<<"__varParseMin__\t"<<tokenExpression[i]<<"\t"<<varCounter<<"\t"<<current->word<<endl;
+        varCounter +=tokenExpression[i].size();
+        i++;
+        
+    }
+    depth++;
+    cout<<"In __varParseMin__ After while "<<endl;
+    __printNode__(current);
+    cout<<tokenExpression[i];
+    if(current && current->children[variable])
+    {
+        cout<<"Entering multiple var"<<endl;
+        __varParse__(current,i,depth,size,tokenExpression);
+    }
+
+    if(current && ((current->children.count(tokenExpression[i])>0 && i>size) || !current->children.count(tokenExpression[i])))
+    {
+        // no path
+        cout<<"Exiting __varParseMin__ : No path"<<endl;
+        return;
+
+    }
+
+    if(current && current->isEnd)
+    {
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);
+        cout<<"pushing "<<current->expression<<endl;
+        if(i==size-1)
+            return;
+    }
+    cout<<"Till here\n";
+    __printNode__(current);
+    if(current && current->children.count(tokenExpression[i])>0)
+    {
+        cout<<"Entering__wordPrase__";
+        __wordPrase__(current,i,depth,size,tokenExpression);
+    }
 
 }
 
-void    ExpressionMatch::__varPraseMax__        (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
+void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
 {
+    if(!current)
+        return;
+    cout<<"In __varParseMax__ with node "<<current->word<<endl;
+
+    if(current->isEnd)
+    {
+        cout<<"pushing "<<current->expression<<endl;
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);
+        return;
+    }
+    else
+    {
+        cout<<"No String node present, and no variable node present\n EXITING!!!\n";
+        return;
+    }
+
+    int     varCounter = 0;
+
+    cout<<"current Node\n";
+    __printNode__(current);
+
+    if(current->children[variable])
+    {
+        current = current->children[variable];
+    }
+
+    __printNode__(current);
+    while(i < size && varCounter <varLimit)
+    {
+        // multiple var continiously
+        if(current->children[variable])
+            break;
+        
+        cout<<"__varParseMax__\t"<<tokenExpression[i]<<"\t"<<varCounter<<"\t"<<current->word<<endl;
+        varCounter +=tokenExpression[i].size();
+        i++;
+        
+    }
+    depth++;
+    cout<<"In __varParseMax__ After while "<<endl;
+    __printNode__(current);
+    cout<<tokenExpression[i];
+    if(current && current->children[variable])
+    {
+        cout<<"Entering multiple var"<<endl;
+        __varParse__(current,i,depth,size,tokenExpression);
+    }
+
+    if(current && ((current->children.count(tokenExpression[i])>0 && i>size) || !current->children.count(tokenExpression[i])))
+    {
+        // no path
+        cout<<"Exiting __varParseMax__ : No path"<<endl;
+        return;
+
+    }
+
+    if(current && current->isEnd)
+    {
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);
+        cout<<"pushing "<<current->expression<<endl;
+        if(i==size-1)
+            return;
+    }
+    cout<<"Till here\n";
+    __printNode__(current);
+    if(current && current->children.count(tokenExpression[i])>0)
+    {
+        cout<<"Entering__wordPrase__";
+        __wordPrase__(current,i,depth,size,tokenExpression);
+    }
+
+}
+
+void    ExpressionMatch::__wordPrase__        (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
+{
+    if(!current)
+        return;
+    if(current->isEnd)
+    {
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);
+        if(i==size-1)
+            return;
+    }
+
+    while(current->children[tokenExpression[i]])
+    {
+        current = current->children[tokenExpression[i]];
+        cout<<"__wordPrase__\t"<<tokenExpression[i]<<"\t"<<current->word<<endl;
+
+        depth++;
+        i++;
+    }
+
+    if(current->isEnd)
+    {
+        cout<<"__wordPrase__\t"<<i<<"\t"<<"pushing result"<<endl;
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);
+        if(i==size-1)
+            return;
+    }
+
+    cout<<"Entering __varParse__"<<endl;
+    __varParse__(current,i,depth,size,tokenExpression);
 
 }
 
@@ -102,7 +294,9 @@ void    ExpressionMatch::__printNode__          (Node* current)
         cout<<"\tChildren:\n\t{"<<endl;
         for(auto itr:current->children)
         {
-            cout<<"\t\t"<<itr.first<<endl;
+            cout<<"\t\t"<<itr.first<<"\t";
+            bool flag = itr.second?true:false;
+            cout<<flag<<endl;
         }
         cout<<"\t}"<<endl;
 
@@ -211,6 +405,36 @@ void    ExpressionMatch::insert                 (vector<string> expressionList)
 
 string    ExpressionMatch::search               (string body)
 {
-    return "";
+    Node*           current         = head;
+    vector<string>  bodyToken;
+
+    __stringTokenize__(body,bodyToken);
+
+    for(string s:bodyToken)
+    {
+        cout<<s<<endl;
+    }
+
+    int             bodyTokenSize   = bodyToken.size();
+    int             i               = 0;
+    int             depth           = 0;
+
+    if(current->isEnd)
+    {
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);    
+    }  
+
+    if(current->isVariable)
+    {
+        __varParse__(current,i,depth,bodyTokenSize,bodyToken);
+    }
+    else
+    {
+        __wordPrase__(current,i,depth,bodyTokenSize,bodyToken);
+    }
+
+    return resultHeap.empty() ? "NIL":resultHeap.top().second;
 }
 

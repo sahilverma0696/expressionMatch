@@ -31,3 +31,9 @@ Output
 Best RE match or Empty str
 
 
+```
+cd Single_threaded
+make 
+```
+Currently output will go in `log.txt`
+
