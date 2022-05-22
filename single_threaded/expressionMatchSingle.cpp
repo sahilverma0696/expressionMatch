@@ -403,6 +403,12 @@ string    ExpressionMatch::search               (string body)
         __wordPrase__(current,i,depth,bodyTokenSize,bodyToken);
     }
 
-    return resultHeap.empty() ? "NIL":resultHeap.top().second;
+    string resultStr = resultHeap.empty() ? "NIL":resultHeap.top().second;
+
+    while(!resultHeap.empty())
+    {
+        resultHeap.pop();
+    }
+    return resultStr;
 }
 
