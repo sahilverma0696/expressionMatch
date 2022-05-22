@@ -20,7 +20,6 @@ int main()
 
    
     vector<string> re ={ "A quick brown fox jumps {#*#}",
-                        "A quick brown fox sleeps.",
                         "A quick brown fox jumps {#*#} a {#*#} dog."};
 
     string       body = "A quick brown fox jumps bla a lazy dog.";
@@ -29,9 +28,9 @@ int main()
    //regex->printDFS();
     regex->printBFS();
 
-    string result = regex->search(body);
+    //string result = regex->search(body);
 
-    cout<<result;
+    //cout<<result;
     return 0;
 
 }

@@ -41,6 +41,7 @@ class Node {
 public:
     bool    isEnd;
     bool    isVariable;
+    int     varCount;
 
     string  word;                           // holds the information for the current node word
     string  expression;                     // RE belonging to this path
@@ -49,8 +50,9 @@ public:
 
     Node()
     {
-        isEnd      = false;
+        isEnd       = false;
         isVariable  = false;
+        varCount    = 0;
     }
 
 };
@@ -72,6 +74,7 @@ private:
 private:
     void    __stringTokenize__      (const string &input, vector<string> &output);
     void    __stringsToMap__        (vector<string> &expressionList, unordered_map< string,vector<string> > &expressionMap);
+    void    __varCompress__         (vector<string> &uncompressedToken, vector<string> &compressedToken);
 
     void    __insert__              (string expression, vector<string> &tokenExpression);
 

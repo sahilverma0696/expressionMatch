@@ -43,11 +43,43 @@ void    ExpressionMatch::__stringsToMap__       (vector<string> &expressionList,
     for(string s:expressionList)
     {
         vector<string> tokens;
+        vector<string> compressedToken;
         __stringTokenize__(s,tokens);
-        expressionMap[s] = tokens;
+        __varCompress__(tokens,compressedToken);
+        expressionMap[s] = compressedToken;
     }
 
 }
+
+void    ExpressionMatch::__varCompress__        (vector<string> &uncompressedToken,vector<string> &compressedToken)
+{
+    int i = 0;
+    while(i< uncompressedToken.size())
+    {
+        int counter = 0;
+        if(uncompressedToken[i] != variable)                    //TODO: update to set search
+        {
+            compressedToken.push_back(uncompressedToken[i]);
+            i++;
+        }
+        else
+        {
+            string var = uncompressedToken[i];
+            while(i< uncompressedToken.size() && uncompressedToken[i]==var)   // TODO: check in pool of variable 
+            {
+                counter++;
+                i++;
+            }
+            
+            string newToken = to_string(counter) +" "+ var;
+            compressedToken.push_back(newToken);
+        }
+
+    }
+    
+
+}
+
 
 void    ExpressionMatch::__insert__             (string expression, vector<string> &tokenExpression)
 {
@@ -57,19 +89,35 @@ void    ExpressionMatch::__insert__             (string expression, vector<strin
     for(int i = 0;i<tokenSize;i++)
     {
         string s = tokenExpression[i];
+        cout<<s<<endl;
         if(current->children.count(s)>0)
         {
             current = current->children[s];
         }
         else
         {
-            current->children[s] = new Node();
-            current = current->children[s];
-
-            current->word = s;
-            if(s == variable)
+            if(s.find(variable)!= string::npos)                       // TODO: change checking to set
             {
+                cout<<"HERE With "<<s<<endl;
+                vector<string> varToken;
+                __stringTokenize__(s,varToken);
+                int count = stoi(varToken[0]);
+                string var = varToken[1];
+
+                current->children[var] = new Node();
+                current = current->children[var];
+                
                 current->isVariable = true;
+                current->varCount   = count;
+                current->word = var;
+
+            }
+            else
+            {
+                current->children[s] = new Node();
+                current = current->children[s];
+                current->word = s;
+
             }
         }
     }
@@ -324,6 +372,12 @@ void    ExpressionMatch::__beautyBFS__(list<Node*> level)
     for(Node* current:level)
     {
         cout<<"\tisVariable:\t"<<current->isVariable<<"\t\t";
+    }
+    cout<<"\n";
+
+    for(Node* current:level)
+    {
+        cout<<"\tVariable count:\t"<<current->varCount<<"\t\t";
     }
     cout<<"\n";
 
