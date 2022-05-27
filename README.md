@@ -45,3 +45,8 @@ Currently not working with {#*#}
 
 Main -> main
 Debug and log -> bug
+
+
+#### sample data obtained from 
+https://www.smsgatewaycenter.com/site/apartment-society-sms/
+thanks 
