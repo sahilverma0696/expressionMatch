@@ -32,4 +32,10 @@
 *.app
 
 # Logs
-*.txt
+log.txt
+
+#vscode
+.vscode
+
+#.DS_Store
+.DS_Store

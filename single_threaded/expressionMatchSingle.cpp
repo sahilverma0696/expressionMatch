@@ -126,6 +126,15 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
     }
     depth++;
 
+    if(current && current->isEnd)
+    {
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);
+        if(i==size-1)
+            return;
+    }
+
     if(current && current->children[variable])
     {
         __varParse__(current,i,depth,size,tokenExpression);
@@ -135,15 +144,6 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
     {
         // no path
         return;
-    }
-
-    if(current && current->isEnd)
-    {
-        pair<int,string> p;
-        p = make_pair(depth,current->expression);
-        resultHeap.push(p);
-        if(i==size-1)
-            return;
     }
 
     if(current && current->children.count(tokenExpression[i])>0)
@@ -191,6 +191,15 @@ void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth
     }
     depth++;
 
+    if(current && current->isEnd)
+    {
+        pair<int,string> p;
+        p = make_pair(depth,current->expression);
+        resultHeap.push(p);
+        if(i==size-1)
+            return;
+    }
+
     if(current && current->children[variable])
     {
         __varParse__(current,i,depth,size,tokenExpression);
@@ -201,15 +210,6 @@ void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth
         // no path
         return;
 
-    }
-
-    if(current && current->isEnd)
-    {
-        pair<int,string> p;
-        p = make_pair(depth,current->expression);
-        resultHeap.push(p);
-        if(i==size-1)
-            return;
     }
 
     if(current && current->children.count(tokenExpression[i])>0)
