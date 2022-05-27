@@ -2,7 +2,7 @@ Admissions are open for Pre Nursery to Grade {#*#} for academic session {#*#} - 
 Your ward, {#*#} was absent today without PRIOR NOTICE. Please send your ward with requisition letter. Regards {#*#}
 Dear Parent, Your ward's, {#*#} attendance for the month of {#*#} {#*#} is {#*#} days. Regards {#*#}
 Dear Parents, Your ward {#*#} of Class {#*#} {#*#} is absent today. Kindly send a leave application/medical certificate as per the school policy. Regards {#*#}
-Dear Parents Tomorrow ({#*#} {#*#},{#*#}), there will be a holiday on account of {#*#} as per Government notification. Thanks. PRINCIPAL, {#*#}
+Dear Parents Tomorrow ({#*#}), there will be a holiday on account of {#*#} as per Government notification. Thanks. PRINCIPAL, {#*#}
 Dear Parent, school will remain closed on {#*#} {#*#}, {#*#} due to {#*#}. Thanks. PRINCIPAL, {#*#}
 Dear Parent, here comes the Summer vacation for your ward, {#*#}. School will resume from {#*#} and attendance is mandatory. Thanks. PRINCIPAL, {#*#}
 Dear parent of {#*#}, school fee needs to be paid for the month of {#*#} {#*#}. Please contact administrator. {#*#}

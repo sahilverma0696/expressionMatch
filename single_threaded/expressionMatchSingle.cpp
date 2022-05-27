@@ -113,7 +113,7 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
         return;
     }
 
-    __printNode__(current);
+   // __printNode__(current);
     while(current && current->children.count(tokenExpression[i])==0 && i < size && varCounter <varLimit)
     {
         // multiple var continiously
@@ -378,10 +378,6 @@ string    ExpressionMatch::search               (string body)
 
     __stringTokenize__(body,bodyToken);
 
-    for(string s:bodyToken)
-    {
-        cout<<s<<endl;
-    }
 
     int             bodyTokenSize   = bodyToken.size();
     int             i               = 0;
