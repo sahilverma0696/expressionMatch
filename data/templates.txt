@@ -37,7 +37,7 @@ Dear {#*#}, School bus will be arriving {#*#} late today. Kindly bear with us fo
 Dear {#*#}, Students are not allowed to unboard other than the allocated unboarding point. If this continues, the service will be revoked without any further notice. Regards, {#*#}
 Dear {#*#}, Inter-college singing competition {#*#} which will be held at on {#*#}. Please register to participate. Regards PRINCIPAL, {#*#}
 Dear {#*#}, semester examinations will commence from {#*#}. Please collect the Hall ticket. Regards {#*#}
-Dear {#*#}, {#*#} examination has been postponed to {#*#} due to question paper leak. Regards {#*#}
+Dear {#*#}, examination has been postponed to {#*#} due to question paper leak. Regards {#*#}
 Dear {#*#}, Kindly collect the {#*#} Mark Sheet from Institute between {#*#} to {#*#} on {#*#} and also can be dowloaded from college's website. Regards {#*#}
 Dear {#*#}, your resume has been shortlisted for {#*#} post from {#*#} for a campus interview. Best wishes! {#*#}
 Dear {#*#}, Congratulations !{#*#} has recruited you as {#*#} post. Best wishes! {#*#}
@@ -70,7 +70,7 @@ Dear Customer, Min payment {#*#}/total payment {#*#} for {#*#} Card {#*#} is due
 Your {#*#} card ending {#*#} has been delivered via Courier Company. Select APIN/IPIN (Internet PIN) at {#*#} if not available.
 Dear customer, your EMI of {#*#} is scheduled for ECS clearance on {#*#}. Please keep sufficient balance. {#*#}.
 Dear customer, Thank you for choosing us. Your new savings bank account with no. {#*#} has been opened successfully. - {#*#}.
-Dear Customer, we have received your acceptance of the {#*#} cum T&{#*#}, {#*#}. Please complete your online application process for limit setup. T&C apply.
+Dear Customer, we have received your acceptance of the {#*#} cum {#*#}, {#*#}. Please complete your online application process for limit setup. T&C apply.
 Dear Customer, Congratulations! Your Overdraft facility has been sanctioned for {#*#} against your Application No. {#*#}. Our representative will contact you for disbursement process. The details have been sent to your registered e-mail ID.
 Dear customer, your FD account no. {#*#} will get matured on {#*#}. Matured amount will be automatically transferred to your savings account. {#*#} bank
 {#*#} sincerely thank all the supporters for electing him as their new Mayor for {#*#}.

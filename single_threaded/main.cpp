@@ -15,36 +15,9 @@ int main(int argc, char** argv)
         
 
     string variable = "{#*#}";
-    string delimeter= " ,.-:()/";
+    string delimeter= " ,.-:()/!\"\'";
     int    varLimit = 50;
     ExpressionMatch* regex = new ExpressionMatch(variable,delimeter,varLimit,debug);
-
-    /*
-    string input = "is seven-layer cake only had six: layers.";
-    vector<string> output;
-    regex->__stringTokenize__(input,output);
-
-    for(string s:output)
-        cout<<s<<endl;
-
-    */
-
-    /*
-    vector<string> re ={ "A quick brown fox jumps {#*#}",
-                        "A quick brown fox sleeps.",
-                        "A quick brown fox jumps {#*#} a {#*#} dog."};
-
-    string       body = "A quick brown fox jumps bla a lazy dog.";
-    
-    regex->insert(re);
-   //regex->printDFS();
-    regex->printBFS();
-
-    string result = regex->search(body);
-
-    cout<<result;
-
-    */
 
     
     vector<string> re;
@@ -83,7 +56,7 @@ int main(int argc, char** argv)
     }
     else
     {
-        string body = "Dear Parents Tomorrow (25th Sept,2015), there will be a holiday on account of Id-Ul-Zuha as per Government notification. Thanks. PRINCIPAL, Popular Sammrat School";
+        string body = "Dear Customer, we have received your acceptance of the OD Application Form cum T&C, Debit Mandate and SOC. Please complete your online application process for limit setup. T&C apply.";
         cout<<body<<endl;
         cout<<regex->search(body);
     }
