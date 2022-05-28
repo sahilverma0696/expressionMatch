@@ -90,6 +90,7 @@ void    ExpressionMatch::__varParse__           (Node* current, int i, int depth
 
 void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
 {
+    cout<<__PRETTY_FUNCTION__<<endl;
     if(!current)
         return;
 
@@ -109,22 +110,24 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
     }
     else
     {
-        // no valid path
+        cout<<"no valid path"<<endl;
         return;
     }
 
-   // __printNode__(current);
+    __printNode__(current);
     while(current && current->children.count(tokenExpression[i])==0 && i < size && varCounter <varLimit)
     {
         // multiple var continiously
         if(current->children[variable])
             break;
-        
+        cout<<tokenExpression[i]<<endl;
         varCounter +=tokenExpression[i].size();
         i++;
         
     }
     depth++;
+    cout<<"After while loop of "<<__PRETTY_FUNCTION__<<endl;
+    cout<<tokenExpression[i]<<endl;
 
     if(current && current->isEnd)
     {
@@ -134,27 +137,30 @@ void    ExpressionMatch::__varParseMin__        (Node* current, int i, int depth
         if(i==size-1)
             return;
     }
+    if(current && current->children.count(tokenExpression[i])>0)
+    {
+        cout<<"GOING IN __wordPrase__"<<endl;
+        __wordPrase__(current,i,depth,size,tokenExpression);
+    }
 
     if(current && current->children[variable])
     {
+        cout<<"GOING IN __varParse__"<<endl;
         __varParse__(current,i,depth,size,tokenExpression);
     }
 
     if(current && ((current->children.count(tokenExpression[i])>0 && i>size) || !current->children.count(tokenExpression[i])))
     {
-        // no path
+        cout<<"no path"<<endl;
         return;
     }
 
-    if(current && current->children.count(tokenExpression[i])>0)
-    {
-        __wordPrase__(current,i,depth,size,tokenExpression);
-    }
 
 }
 
 void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
 {
+    cout<<__PRETTY_FUNCTION__<<endl;
     if(!current)
         return;
 
@@ -167,7 +173,7 @@ void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth
     }
     else
     {
-        // No path
+        cout<<"No path"<<endl;
         return;
     }
 
@@ -184,12 +190,13 @@ void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth
         // multiple var continiously
         if(current->children[variable])
             break;
-        
+        cout<<tokenExpression[i]<<endl;
         varCounter +=tokenExpression[i].size();
         i++;
         
     }
     depth++;
+    cout<<"After while loop of "<<__PRETTY_FUNCTION__<<endl;
 
     if(current && current->isEnd)
     {
@@ -207,7 +214,7 @@ void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth
 
     if(current && ((current->children.count(tokenExpression[i])>0 && i>size) || !current->children.count(tokenExpression[i])))
     {
-        // no path
+        cout<<"no path"<<endl;
         return;
 
     }
@@ -221,6 +228,7 @@ void    ExpressionMatch::__varParseMax__        (Node* current, int i, int depth
 
 void    ExpressionMatch::__wordPrase__        (Node* current, int i, int depth, int size, vector<string> &tokenExpression)
 {
+    cout<<__PRETTY_FUNCTION__<<endl;
     if(!current)
         return;
     if(current->isEnd)
@@ -235,10 +243,14 @@ void    ExpressionMatch::__wordPrase__        (Node* current, int i, int depth, 
     while(current->children[tokenExpression[i]])
     {
         current = current->children[tokenExpression[i]];
+        cout<<tokenExpression[i]<<endl;
         depth++;
         i++;
     }
 
+    cout<<"After while loop of "<<__PRETTY_FUNCTION__<<endl;
+    __printNode__(current);
+    cout<<tokenExpression[i]<<endl;
     if(current->isEnd)
     {
         pair<int,string> p;
@@ -373,6 +385,7 @@ void    ExpressionMatch::insert                 (vector<string> expressionList)
 
 string    ExpressionMatch::search               (string body)
 {
+    cout<<__PRETTY_FUNCTION__<<endl;
     Node*           current         = head;
     vector<string>  bodyToken;
 

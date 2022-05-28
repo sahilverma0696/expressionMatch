@@ -60,6 +60,7 @@ int main()
         bodyFile.close();
     }
 
+
     string body = "Dear Parents Tomorrow (25th Sept,2015), there will be a holiday on account of Id-Ul-Zuha as per Government notification. Thanks. PRINCIPAL, Popular Sammrat School";
     cout<<regex->search(body);
     /*
