@@ -446,6 +446,9 @@ string    ExpressionMatch::search               (string body)
     if(__DEBUG__)
         cout<<__PRETTY_FUNCTION__<<endl;
 
+    if(body == "")
+        return "NIL";
+
     Node*           current         = head;
     vector<string>  bodyToken;
 
