@@ -11,3 +11,7 @@ test:
 	g++ --std=c++17  expressionMatchSingle.cpp  main.cpp -o regex.out 
 	./regex.out --test > basic.log
 
+clean:
+	rm -rf *.log
+	rm -rf *.out
+
