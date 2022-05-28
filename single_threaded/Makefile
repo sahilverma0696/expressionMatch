@@ -7,4 +7,7 @@ release:
 	g++ --std=c++17 expressionMatchSingle.cpp main.cpp -o regex.out
 	./regex.out > basic.log
 
-#make for test as well
+test:
+	g++ --std=c++17  expressionMatchSingle.cpp  main.cpp -o regex.out 
+	./regex.out --test > basic.log
+
