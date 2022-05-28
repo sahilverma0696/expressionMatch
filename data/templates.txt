@@ -2,16 +2,8 @@ Admissions are open for Pre Nursery to Grade {#*#} for academic session {#*#} - 
 Your ward, {#*#} was absent today without PRIOR NOTICE. Please send your ward with requisition letter. Regards {#*#}
 Dear Parent, Your ward's, {#*#} attendance for the month of {#*#} {#*#} is {#*#} days. Regards {#*#}
 Dear Parents, Your ward {#*#} of Class {#*#} {#*#} is absent today. Kindly send a leave application/medical certificate as per the school policy. Regards {#*#}
-Dear Parents Tomorrow ({#*#} {#*#},{#*#}), there will be a holiday on account of {#*#} as per Government notification. Thanks. PRINCIPAL, {#*#}
-Dear Parent, school will remain closed on {#*#} {#*#}, {#*#} due to {#*#}. Thanks. PRINCIPAL, {#*#}
-Dear Parent, here comes the Summer vacation for your ward, {#*#}. School will resume from {#*#} and attendance is mandatory. Thanks. PRINCIPAL, {#*#}
-Dear parent of {#*#}, school fee needs to be paid for the month of {#*#} {#*#}. Please contact administrator. {#*#}
-Dear parent of {#*#}, please note the last date to pay your ward's fee for the month of {#*#} {#*#} is {#*#}. {#*#}
-Dear Parent of {#*#}, Bank Manager - {#*#} {#*#} has advised parents to pay school fee of their wards by new currency notes only at their branch OR by cheque of any bank. Ignore if already paid. Inconvenience is regretted. Regards {#*#}
-Dear parent of {#*#}, please note that the Driver of Bus No. {#*#}, {#*#} has resigned from our school duty. FYI. Regards PRINCIPAL, {#*#}
-Dear parent, you are hereby requested to attend our PTM (Parent Teachers Meeting) on {#*#} between {#*#} to {#*#}. Regards PRINCIPAL, {#*#}
-Dear parent, our teaching technology is changing for your ward, meet your ward's teacher for more information on {#*#} between {#*#} to {#*#}. Regards PRINCIPAL, {#*#}
-Dear Parents, Tomorrow, {#*#} ({#*#} {#*#}, {#*#}) there will be a parent teacher meeting for the discussion of your ward's performance in the school. It is compulsory to attend the meeting. Kindly note that it will be a holiday for students. Regards PRINCIPAL, {#*#}
+Dear Parents Tomorrow ({#*#}), there will be a holiday on account of {#*#} as per Government notification. Thanks. PRINCIPAL, {#*#}
+Dear Parents, Tomorrow,({#*#}) there will be a parent teacher meeting for the discussion of your ward's performance in the school. It is compulsory to attend the meeting. Kindly note that it will be a holiday for students. Regards PRINCIPAL, {#*#}
 Dear parent, A warm welcome to our Annual Sports Day {#*#} which will be held at our School premises on {#*#} between {#*#} to {#*#}. Regards PRINCIPAL, {#*#}
 Dear parent, Drawing competition will be held on {#*#} between {#*#} to {#*#}. We look forward for your presence. Regards PRINCIPAL, {#*#}
 Dear parent, we are organizing field trip to {#*#} on {#*#}. Please read the sent manual and make necessary arrangements for the trip. Regards PRINCIPAL, {#*#}
