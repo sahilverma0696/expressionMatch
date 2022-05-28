@@ -1,26 +1,34 @@
-Admissions are open for Pre Nursery to Grade {#*#} for academic session {#*#} - {#*#} and for Pre Nursery to 10 for {#*#}-{#*#}. {#*#}
+Admissions are open for Pre Nursery to Grade {#*#} for academic session {#*#}  and for Pre Nursery to 10 for {#*#}
 Your ward, {#*#} was absent today without PRIOR NOTICE. Please send your ward with requisition letter. Regards {#*#}
-Dear Parent, Your ward's, {#*#} attendance for the month of {#*#} {#*#} is {#*#} days. Regards {#*#}
-Dear Parents, Your ward {#*#} of Class {#*#} {#*#} is absent today. Kindly send a leave application/medical certificate as per the school policy. Regards {#*#}
+Dear Parent, Your ward's, {#*#} attendance for the month of {#*#} is {#*#} days. Regards {#*#}
+Dear Parents, Your ward {#*#} of Class {#*#} is absent today. Kindly send a leave application/medical certificate as per the school policy. Regards {#*#}
 Dear Parents Tomorrow ({#*#}), there will be a holiday on account of {#*#} as per Government notification. Thanks. PRINCIPAL, {#*#}
-Dear Parents, Tomorrow,({#*#}) there will be a parent teacher meeting for the discussion of your ward's performance in the school. It is compulsory to attend the meeting. Kindly note that it will be a holiday for students. Regards PRINCIPAL, {#*#}
+Dear Parent, school will remain closed on {#*#}  due to {#*#}. Thanks. PRINCIPAL, {#*#}
+Dear Parent, here comes the Summer vacation for your ward, {#*#}. School will resume from {#*#} and attendance is mandatory. Thanks. PRINCIPAL, {#*#}
+Dear parent of {#*#}, school fee needs to be paid for the month of {#*#}. Please contact administrator. {#*#}
+Dear parent of {#*#}, please note the last date to pay your ward's fee for the month of {#*#} is {#*#}.
+Dear Parent of {#*#}, Bank Manager - {#*#} has advised parents to pay school fee of their wards by new currency notes only at their branch OR by cheque of any bank. Ignore if already paid. Inconvenience is regretted. Regards {#*#}
+Dear parent of {#*#}, please note that the Driver of Bus No. {#*#} has resigned from our school duty. FYI. Regards PRINCIPAL, {#*#}
+Dear parent, you are hereby requested to attend our PTM (Parent Teachers Meeting) on {#*#} between {#*#} to {#*#}. Regards PRINCIPAL, {#*#}
+Dear parent, our teaching technology is changing for your ward, meet your ward's teacher for more information on {#*#} between {#*#} to {#*#}. Regards PRINCIPAL, {#*#}
+Dear Parents, Tomorrow, {#*#}  there will be a parent teacher meeting for the discussion of your ward's performance in the school. It is compulsory to attend the meeting. Kindly note that it will be a holiday for students. Regards PRINCIPAL, {#*#}
 Dear parent, A warm welcome to our Annual Sports Day {#*#} which will be held at our School premises on {#*#} between {#*#} to {#*#}. Regards PRINCIPAL, {#*#}
 Dear parent, Drawing competition will be held on {#*#} between {#*#} to {#*#}. We look forward for your presence. Regards PRINCIPAL, {#*#}
 Dear parent, we are organizing field trip to {#*#} on {#*#}. Please read the sent manual and make necessary arrangements for the trip. Regards PRINCIPAL, {#*#}
 Respected Parents, We will celebrate {#*#} on tomorrow date {#*#}. Send your ward in proper Costume for the same. {#*#}
 Dear Parent, {#*#} semester examinations will commence from {#*#}. Please collect the Hall ticket. Regards {#*#}
-Dear Parent of {#*#}, {#*#} Test's time table has sent with your ward. Regards {#*#}
+Dear Parent of {#*#} Test's time table has sent with your ward. Regards {#*#}
 Dear Parent of {#*#}, Kindly collect the {#*#} Test Mark Sheet from school between {#*#} to {#*#} on {#*#}. Regards {#*#}
 Dear Teachers, meeting will be conducted on Annual examination. Please be present in staff room at {#*#} on {#*#}. Regards, PRINCIPAL {#*#}
 Dear Teachers, please be advised to be present on this {#*#} at {#*#} for important discussion on Annual School Day Function. Thanks. PRINCIPAL, {#*#}
 Mobile App login school code is {#*#}, Mobile number on which you receive this SMS and validation code is {#*#}. Regards, Principal
 Parents of {#*#} to {#*#} are requested to come and collect the books of their ward tomorrow {#*#} from the school between {#*#} to {#*#}. Principal, {#*#}
 Dear Parent of {#*#} Outdoor study trip of Class {#*#} has been postponed to {#*#} from {#*#} due to huge rush at venue. Regards {#*#}
-Applications are invited by {#*#}, {#*#} for admission to Doctor of Philosophy (Ph.D) in Engineering, Humanities & Social Sciences, Management and Applied Sciences (Physics/ Chemistry/ Mathematics) {#*#} programs for the {#*#} semester session. Contact {#*#} on {#*#}.
-Get {#*#} Admissions with bank loans. Admissions open for  {#*#} {#*#}. Log on to website to download application. {#*#}, Mumbai
-{#*#} proudly announces new course in {#*#}. {#*#}. The course is recognised under {#*#} University. Call on {#*#} for more information.
+Applications are invited by {#*#}, for admission to Doctor of Philosophy (Ph.D) in Engineering, Humanities & Social Sciences, Management and Applied Sciences (Physics/ Chemistry/ Mathematics) {#*#} programs for the {#*#} semester session. Contact {#*#} on {#*#}.
+Get {#*#} Admissions with bank loans. Admissions open for  {#*#} {#*#}. Log on to website to download application. {#*#}
+{#*#} proudly announces new course in {#*#}. The course is recognised under {#*#} University. Call on {#*#} for more information.
 Dear Parent/student Tomorrow ({#*#}), there will be a holiday on account of {#*#} as per Government notification. {#*#}
-Dear Parent/student, Institute will remain closed on {#*#} due to {#*#}. {#*#}
+Dear Parent/student, Institute will remain closed on {#*#} due to {#*#}
 Dear Parent/student, {#*#} Semester classes will resume from {#*#} and attendance is mandatory. {#*#}
 Dear parent of {#*#}, Institute fee needs to be paid for the month of {#*#}. Please contact administrator. {#*#}
 Dear parent of {#*#}, your ward's fee is due since last {#*#} of {#*#}. Pay immediately to avoid penalty. Ignore if already paid. {#*#}
@@ -28,27 +36,27 @@ Dear parent of {#*#}, you are requested to pay the bus fee of {#*#} for the mont
 Dear {#*#}, School bus will be arriving {#*#} late today. Kindly bear with us for inconvenience. Regards, {#*#}
 Dear {#*#}, Students are not allowed to unboard other than the allocated unboarding point. If this continues, the service will be revoked without any further notice. Regards, {#*#}
 Dear {#*#}, Inter-college singing competition {#*#} which will be held at on {#*#}. Please register to participate. Regards PRINCIPAL, {#*#}
-Dear {#*#}, {#*#} semester examinations will commence from {#*#}. Please collect the Hall ticket. Regards {#*#}
+Dear {#*#}, semester examinations will commence from {#*#}. Please collect the Hall ticket. Regards {#*#}
 Dear {#*#}, {#*#} examination has been postponed to {#*#} due to question paper leak. Regards {#*#}
 Dear {#*#}, Kindly collect the {#*#} Mark Sheet from Institute between {#*#} to {#*#} on {#*#} and also can be dowloaded from college's website. Regards {#*#}
 Dear {#*#}, your resume has been shortlisted for {#*#} post from {#*#} for a campus interview. Best wishes! {#*#}
 Dear {#*#}, Congratulations !{#*#} has recruited you as {#*#} post. Best wishes! {#*#}
 Dear {#*#}, your reserved book {#*#} is back to our library. Please have it collected from Librarian. {#*#}
-Dear {#*#}, you are advised to return back all books on or before {#*#}. {#*#}
+Dear {#*#}, you are advised to return back all books on or before {#*#}.
 Dear {#*#}, the issued book {#*#} is required by the management. Please return it immediately. {#*#}
-Dear parent of {#*#}, you are requested to pay your ward's mess fee of {#*#} for the month of {#*#}. {#*#}
-Dear parent of {#*#}, your ward's hostel fee of {#*#} for the month of {#*#} is due from last {#*#}. {#*#}
+Dear parent of {#*#}, you are requested to pay your ward's mess fee of {#*#} for the month of {#*#}
+Dear parent of {#*#}, your ward's hostel fee of {#*#} for the month of {#*#} is due from last {#*#}
 Dear parent of {#*#}, you are hereby informed that your ward has been suspended for {#*#}. Please consult our principal. {#*#}
 {#*#} offers home loans with the best rate of interest, NO preclosure and no penalty on part pre-payments. Reach us on E-Mail or MobileNo. - {#*#}.
 {#*#} offers personal loans with the best rate of interest, Faster approval in {#*#}. Reach us on E-Mail or MobileNo. - {#*#}.
 {#*#} offers you free demat account to trade. Open your demat account for free by visting {#*#}
-{#*#} {#*#} bank provides Overdraft account at {#*#} without any collateral. Call us now or visit our branch to open your over draft account.
+{#*#} bank provides Overdraft account at {#*#} without any collateral. Call us now or visit our branch to open your over draft account.
 {#*#} bank is offering zero balance savings account with {#*#} interest rate. Open your savings account now by visiting our branch.
 Get Business Loans upto {#*#} at less rate of interest. Call us to visit you in person. {#*#}.
 {#*#} bank offers life time free credit card. Initial credit limit is {#*#}. Visit {#*#} . com and fill your details today.
 Dear Customer, {#*#} is your SECRET OTP(One Time Password) to authenticate your login to Internet Banking. Do not share it with anyone.
 Dear Customer, you need an OTP to process NEFT/IMPS payment. The OTP is {#*#}. NEVER SHARE IT WITH ANYONE. BANK NEVER CALLS TO VERIFY IT.
-To reset your password, validate with this OTP, {#*#}. {#*#}
+To reset your password, validate with this OTP, {#*#}.
 Dear Customer, you need an OTP to confirm/delete {#*#} as a Payee.The OTP is {#*#}. NEVER SHARE IT WITH ANYONE. BANK NEVER CALLS TO VERIFY IT.
 Dear Customer, {#*#} is debited from A/c {#*#} for BillPay/Credit Card payment via Example Bank NetBanking. Call {#*#} if txn not done by you
 UPDATE: Your A/c {#*#} credited with {#*#} on {#*#} by A/c linked to mobile no {#*#}(IMPS Ref No. {#*#}) Available bal: {#*#}
@@ -78,13 +86,13 @@ To cast your vote and to know your nearest polling booth, please visit, {#*#} in
 For the better development of our city, we need your support and votes in this coming election. Vote for {#*#}. {#*#}
 Thank you for electing me as your new President for {#*#}. {#*#}.
 {#*#} Election will be held on {#*#} at {#*#}. Please cast your valuable votes. {#*#}
-Dear Residents of {#*#}, please cast your vote to elect {#*#} as Association's {#*#}, {#*#} as Association's {#*#} in the coming election.
+Dear Residents of {#*#}, please cast your vote to elect {#*#} as Association's {#*#},as Association's {#*#} in the coming election.
 The election of {#*#} will be scheduled on {#*#} between {#*#} to {#*#}
 {#*#} association will be celebrating {#*#}. We request your presence and seek for {#*#}.
 Dear {#*#}, you are hereby requested to pay your maintenance bill urgently. {#*#}
 Dear {#*#}, maintenance fee needs to be paid for the month of {#*#}. {#*#}
-Dear Members, for the year {#*#} property tax needs to be paid. Please take care of the same. {#*#}
-Dear Members, many of you have not paid corpus fund due. Kindly process the payment by {#*#}. {#*#}
-Urgent meeting is called by the Managing Committee to take decision regarding security of our premises on {#*#} between {#*#} to {#*#}. {#*#}
+Dear Members, for the year {#*#} property tax needs to be paid. Please take care of the same.
+Dear Members, many of you have not paid corpus fund due. Kindly process the payment by {#*#}
+Urgent meeting is called by the Managing Committee to take decision regarding security of our premises on {#*#} between {#*#} to {#*#}
 Dear Members, please be advised that the lift of {#*#} will be serviced on {#*#}. Inconvenience regretted. {#*#}
-All the members are invited to enjoy the {#*#} on {#*#} from {#*#} to {#*#}. . For any query contact {#*#} {#*#}.
+All the members are invited to enjoy the {#*#} on {#*#} from {#*#} to {#*#}. . For any query contact {#*#}

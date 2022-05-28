@@ -6,13 +6,16 @@ int main(int argc, char** argv)
 {
 
     bool debug = false;
+    bool test  = false;
     for(int i = 0; i < argc; i++)
         if(string(argv[i]) == "--debug")
             debug = true;
+        else if(string(argv[i]) == "--test")
+            test = true;
         
 
     string variable = "{#*#}";
-    string delimeter= " ,.-:()";
+    string delimeter= " ,.-:()/";
     int    varLimit = 50;
     ExpressionMatch* regex = new ExpressionMatch(variable,delimeter,varLimit,debug);
 
@@ -56,7 +59,7 @@ int main(int argc, char** argv)
     }
 
     regex->insert(re);
-    //regex->printDFS();
+    //regex->printBFS();
 
     ifstream bodyFile("../data/bodies.txt");
     if (bodyFile.is_open()) {
@@ -67,15 +70,24 @@ int main(int argc, char** argv)
     }
 
 
-    //string body = "Dear Parents Tomorrow (25th Sept,2015), there will be a holiday on account of Id-Ul-Zuha as per Government notification. Thanks. PRINCIPAL, Popular Sammrat School";
-    //cout<<regex->search(body);
     
-    for(string body : bodies)
+    
+    if(test)
     {
-        cout<<body<<"~";
-        cout<<regex->search(body)<<"~";
-        cout<<endl;
+        for(string body : bodies)
+        {
+            cout<<body<<"~";
+            cout<<regex->search(body)<<"~";
+            cout<<endl;
+        }
     }
+    else
+    {
+        string body = "Dear Parents Tomorrow (25th Sept,2015), there will be a holiday on account of Id-Ul-Zuha as per Government notification. Thanks. PRINCIPAL, Popular Sammrat School";
+        cout<<body<<endl;
+        cout<<regex->search(body);
+    }
+    
     
 
 

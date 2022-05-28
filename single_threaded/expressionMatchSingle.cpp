@@ -283,11 +283,16 @@ void    ExpressionMatch::__wordPrase__        (Node* current, int i, int depth, 
 
     while(current->children[tokenExpression[i]])
     {
-        current = current->children[tokenExpression[i]];
-
         if(__DEBUG__)
+        {
+            cout<<"IN WHILE LOOP OF "<<__PRETTY_FUNCTION__<<endl;
             cout<<tokenExpression[i]<<endl;
+            __printNode__(current);
+        }
 
+        current = current->children[tokenExpression[i]];
+        if(__DEBUG__)
+            __printNode__(current);
         depth++;
         i++;
     }
@@ -316,6 +321,7 @@ void    ExpressionMatch::__wordPrase__        (Node* current, int i, int depth, 
 
 void    ExpressionMatch::__printNode__          (Node* current)
 {   
+    cout<<"\n\n";
     if(current) {
         cout<<"\tWord:\t"<<current->word<<endl;
         cout<<"\tisVariable:\t"<<current->isVariable<<endl;
@@ -331,6 +337,8 @@ void    ExpressionMatch::__printNode__          (Node* current)
         cout<<"\t}"<<endl;
 
     }
+
+    cout<<"\n\n";
 
 }
 
@@ -455,6 +463,12 @@ string    ExpressionMatch::search               (string body)
         resultHeap.push(p);    
     }  
 
+    if(__DEBUG__)
+    {
+        cout<<"PRINTING HEAD\n";
+        __printNode__(current);
+    }
+        
     if(current->isVariable)
     {
         if(__DEBUG__)
@@ -464,7 +478,7 @@ string    ExpressionMatch::search               (string body)
     else
     {
         if(__DEBUG__)
-            cout<<"GOING IN __varParse__"<<endl;
+            cout<<"GOING IN __wordPrase__"<<endl;
         __wordPrase__(current,i,depth,bodyTokenSize,bodyToken);
     }
 
