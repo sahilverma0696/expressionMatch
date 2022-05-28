@@ -33,6 +33,7 @@ and we return from the maxHeap.
 using namespace std;
 
 
+
 class Node {
     // Elemental class of the complete strucuture 
     // this is similar to a trie based node
@@ -69,6 +70,8 @@ private:
 
     priority_queue< pair<int,string> > resultHeap;
 
+    bool        __DEBUG__ = false;
+
 private:
     void    __stringTokenize__      (const string &input, vector<string> &output);
     void    __stringsToMap__        (vector<string> &expressionList, unordered_map< string,vector<string> > &expressionMap);
@@ -88,7 +91,7 @@ private:
     void    __beautyBFS__           (list<Node*> level);
 public:
 
-    ExpressionMatch     (string varExpression, string delimeters, int varLimit);
+    ExpressionMatch     (string varExpression, string delimeters, int varLimit,bool debug);
 
     void    printDFS    ();
     void    printBFS    ();

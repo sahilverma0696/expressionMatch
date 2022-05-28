@@ -2,7 +2,7 @@
 
 Sample string : A quick brown fox jumps over a lazy dog
 
-1. Keep one variable atomic 
+## 1. Keep one variable atomic 
 
 Since it can absorb multiple tokens, for bigger segments use ```varLimit```.
 ```
@@ -10,7 +10,7 @@ Since it can absorb multiple tokens, for bigger segments use ```varLimit```.
     Invalid : A quick {#*#} {#*#} jumps ...
 ```
 
-2. Normalize the REs
+## 2. Normalize the REs
 
 The parser does not matches a fallback search option when a variable is present 
 ```
@@ -34,7 +34,7 @@ The parser does not matches a fallback search option when a variable is present
     'brown' being variable
 ```
 
-3. Enter clean variables 
+## 3. Enter clean variables 
 
 ```
     Invalid:

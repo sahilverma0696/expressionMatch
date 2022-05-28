@@ -2,13 +2,19 @@
 #include<iostream>
 #include <fstream>
 
-int main()
+int main(int argc, char** argv)
 {
+
+    bool debug = false;
+    for(int i = 0; i < argc; i++)
+        if(string(argv[i]) == "--debug")
+            debug = true;
+        
 
     string variable = "{#*#}";
     string delimeter= " ,.-:()";
     int    varLimit = 50;
-    ExpressionMatch* regex = new ExpressionMatch(variable,delimeter,varLimit);
+    ExpressionMatch* regex = new ExpressionMatch(variable,delimeter,varLimit,debug);
 
     /*
     string input = "is seven-layer cake only had six: layers.";
@@ -61,16 +67,16 @@ int main()
     }
 
 
-    string body = "Dear Parents Tomorrow (25th Sept,2015), there will be a holiday on account of Id-Ul-Zuha as per Government notification. Thanks. PRINCIPAL, Popular Sammrat School";
-    cout<<regex->search(body);
-    /*
+    //string body = "Dear Parents Tomorrow (25th Sept,2015), there will be a holiday on account of Id-Ul-Zuha as per Government notification. Thanks. PRINCIPAL, Popular Sammrat School";
+    //cout<<regex->search(body);
+    
     for(string body : bodies)
     {
         cout<<body<<"~";
         cout<<regex->search(body)<<"~";
         cout<<endl;
     }
-    */
+    
 
 
 
