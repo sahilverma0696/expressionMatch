@@ -24,7 +24,9 @@ int main(int argc, char** argv)
     vector<string> re;
     vector<string> bodies;
 
-    ifstream reFile("../data/templates.txt");
+
+    string reFileHandle = string(argv[2]);
+    ifstream reFile(reFileHandle);
     if (reFile.is_open()) {
         string line;
         while (getline(reFile, line))
@@ -42,7 +44,7 @@ int main(int argc, char** argv)
     
     if(test)
     {
-        string fileHandle = string(argv[2]);
+        string fileHandle = string(argv[3]);
         ifstream bodyFile(fileHandle);
         if (bodyFile.is_open()) {
             string line;
@@ -59,7 +61,7 @@ int main(int argc, char** argv)
     }
     else
     {
-        string body = "";
+        string body = "Dear Parent of Ritesh, Bank Manager - Axis Bank Chandni Chowk has advised parents to pay school fee of their wards by new currency notes only at their branch OR by cheque of any bank. Ignore if already paid. Inconvenience is regretted. Regards Popular Sammrat School";
         cout<<body<<endl;
         cout<<regex->search(body);
     }
