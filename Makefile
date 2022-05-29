@@ -7,6 +7,12 @@ testall:
 	g++ --std=c++17  ./single_threaded/expressionMatchSingle.cpp  ./test/test.cpp -o ./bin/regex_test.out
 	./bin/regex_test.out --test ./data/regularExpressions.txt ./data/bodies.txt > ./logs/all_test.log
 
+
+benchmark:
+	g++ --std=c++17  ./single_threaded/expressionMatchSingle.cpp  ./test/test.cpp -o ./bin/regex_benchmark.out
+	./bin/regex_benchmark.out --benchmark ./data/regularExpressions.txt ./data/bodies.txt >> ./logs/benchmark.csv
+
+
 clean:
 	rm -rf *.log
 	rm -rf *.out
