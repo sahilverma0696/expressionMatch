@@ -1,17 +1,24 @@
 #include "../single_threaded/expressionMatchSingle.hpp"
 #include<iostream>
 #include <fstream>
+#include <chrono>
+
+using namespace std::chrono;
 
 int main(int argc, char** argv)
 {
 
-    bool debug = false;
-    bool test  = false;
+    bool debug      = false;
+    bool test       = false;
+    bool benchmark  = false;
 
     if(string(argv[1]) == "--debug")
         debug = true;
     else if(string(argv[1]) == "--test")
         test = true;
+    else if(string(argv[1]) == "--benchmark")
+        benchmark = true;
+
         
 
 
@@ -57,6 +64,28 @@ int main(int argc, char** argv)
             cout<<body<<"~";
             cout<<regex->search(body)<<"~";
             cout<<endl;
+        }
+    }
+    else if(benchmark)
+    {
+        string fileHandle = string(argv[3]);
+        ifstream bodyFile(fileHandle);
+        if (bodyFile.is_open()) {
+            string line;
+            while (getline(bodyFile, line))
+                bodies.push_back(line);
+            bodyFile.close();
+        }
+        for(string body : bodies)
+        {
+            cout<<body<<"~";
+            string result;
+            auto start = high_resolution_clock::now();
+            result = regex->search(body);
+            auto stop = high_resolution_clock::now();
+            cout<<result<<"~";
+            auto duration = duration_cast<microseconds>(stop - start);
+            cout << duration.count() << endl;
         }
     }
     else
