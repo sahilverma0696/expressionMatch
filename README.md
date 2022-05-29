@@ -28,25 +28,16 @@ Input
 2. Input String 
 
 Output
-Best RE match or Empty str
+Best RE match or NIL str
 
 
-```
-cd Single_threaded
-make 
-```
-Currently output will go in `log.txt`
+
 
 ** NOTE **
 Currently not working with {#*#}
 
 
-** Branches **
-
-Main -> main
-Debug and log -> bug
-
 
 #### sample data obtained from 
-https://www.smsgatewaycenter.com/site/apartment-society-sms/
+https://www.smsgatewaycenter.com/site/apartment-society-sms/ <br>
 thanks 
